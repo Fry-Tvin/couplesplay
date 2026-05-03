@@ -3446,13 +3446,6 @@
   "enabled": true
 },
     {
-  "type": "BLOCK",
-  "if": "mood:passion",
-  "then": "tempo:smooth",
-  "description": "Страстно и жадно + медленно и плавно = конфликт темпа и настроения",
-  "enabled": true
-},
-    {
       "type": "BLOCK",
       "if": "poses:wall_behind",
       "then": "place:bed",
