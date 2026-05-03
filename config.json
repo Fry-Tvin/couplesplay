@@ -3165,16 +3165,16 @@
       },
       {
         "id": "photo",
-        "text": "Селфи до/после",
-        "level": "easy",
+        "text": "Селфи во время",
+        "level": "medium",
         "enabled": true,
         "weight": 1.0,
         "tags": [],
         "note": ""
       },
       {
-        "id": "shower",
-        "text": "Принять душ вместе после",
+        "id": "suck",
+        "text": "Взять в рот часть тела партнера",
         "level": "easy",
         "enabled": true,
         "weight": 1.0,
@@ -3220,26 +3220,26 @@
         "note": ""
       },
       {
-        "id": "gift_after",
-        "text": "Один дарит другому маленький подарок",
-        "level": "easy",
+        "id": "slap",
+        "text": "С согласия дать пощечину в процессе",
+        "level": "extra",
         "enabled": true,
         "weight": 1.0,
         "tags": [],
         "note": ""
       },
       {
-        "id": "breakfast",
-        "text": "Совместный завтрак с утра",
-        "level": "easy",
+        "id": "Spill",
+        "text": "Плюнуть в рот партнеру",
+        "level": "extra",
         "enabled": true,
         "weight": 1.0,
         "tags": [],
         "note": ""
       },
       {
-        "id": "rate_each_other",
-        "text": "Оценить ночь по 10-балльной шкале",
+        "id": "rate",
+        "text": "Сказать, как тебе хорошо прямо сейчас",
         "level": "easy",
         "enabled": true,
         "weight": 1.0,
@@ -3248,7 +3248,7 @@
       },
       {
         "id": "wishlist",
-        "text": "Каждый говорит, чего хотел бы попробовать в следующий раз",
+        "text": "Попросить придушить в любой момент",
         "level": "medium",
         "enabled": true,
         "weight": 1.0,
@@ -3257,7 +3257,7 @@
       },
       {
         "id": "send_pic",
-        "text": "Отправить друг другу фото на следующий день",
+        "text": "Отправить друг другу откровенное фото на следующий день",
         "level": "medium",
         "enabled": true,
         "weight": 1.0,
@@ -3265,9 +3265,9 @@
         "note": ""
       },
       {
-        "id": "forbidden_word",
-        "text": "Договоритесь о слове, которое нельзя говорить",
-        "level": "medium",
+        "id": "new_toy",
+        "text": "Использовать подручный предмет как игрушку",
+        "level": "extra",
         "enabled": true,
         "weight": 1.0,
         "tags": [],
@@ -3275,8 +3275,8 @@
       },
       {
         "id": "public_secret",
-        "text": "Носить весь след. день что-то \"помечающее\" под одеждой",
-        "level": "medium",
+        "text": "Ответить на звонок/позвонить кому-то в процессе",
+        "level": "extra",
         "enabled": true,
         "weight": 1.0,
         "tags": [],
@@ -3284,7 +3284,7 @@
       },
       {
         "id": "voice_msg",
-        "text": "Записать голосовое сообщение друг другу",
+        "text": "Отправить голосовое сообщение в процессе",
         "level": "medium",
         "enabled": true,
         "weight": 1.0,
@@ -3443,6 +3443,13 @@
   "if": "mood:massage",
   "then": "poses:face_sit_him",
   "description": "Чувственный массаж + он сидит на лице = не сочетается",
+  "enabled": true
+},
+    {
+  "type": "BLOCK",
+  "if": "mood:passion",
+  "then": "tempo:smooth",
+  "description": "Страстно и жадно + медленно и плавно = конфликт темпа и настроения",
   "enabled": true
 },
     {
