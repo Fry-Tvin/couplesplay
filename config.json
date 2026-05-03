@@ -233,7 +233,7 @@
       "type": "chips",
       "order": 22,
       "enabled": true,
-      "multi": 2
+      "multi": 1
     },
     {
       "id": "novelty",
@@ -3438,6 +3438,41 @@
       "description": "Стоя у стены — нужна стена",
       "enabled": true
     },
+    {
+  "type": "BLOCK",
+  "if": "wild:slap",
+  "then": "mood:soft,romantic,massage,worship",
+  "description": "Пощечина не сочетается с нежными настроениями",
+  "enabled": true
+},
+    {
+  "type": "BLOCK",
+  "if": "mood:play",
+  "then": "tempo:smooth",
+  "description": "Игриво и весело + медленно и плавно = конфликт",
+  "enabled": true
+},
+    {
+  "type": "BLOCK",
+  "if": "sounds:breath_only",
+  "then": "wild:compliments",
+  "description": "Полная тишина + сказать комплименты вслух = конфликт",
+  "enabled": true
+},
+{
+  "type": "BLOCK",
+  "if": "wild:Spill",
+  "then": "mood:soft,romantic,massage,worship",
+  "description": "Spill не сочетается с нежными настроениями",
+  "enabled": true
+},
+{
+  "type": "BLOCK",
+  "if": "wild:wishlist",
+  "then": "mood:soft,romantic,massage,worship",
+  "description": "Wishlist не сочетается с нежными настроениями",
+  "enabled": true
+},
     {
   "type": "BLOCK",
   "if": "mood:massage",
