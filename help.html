@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0a0708">
+<title>Как играть — Ночной сценарий</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="help-head">
+    <button class="help-back" id="helpBack" aria-label="Назад">‹</button>
+    <h2>Как играть</h2>
+  </div>
+
+  <div class="help-body">
+
+    <section class="help-section">
+      <h3>Что это</h3>
+      <p>Игра-рандомайзер для пар. Случайно собирает сценарий вечера из критериев, которые вы сами настраиваете — место, настроение, длительность и так далее. Чтобы каждый раз было разное, но в рамках того, что хотите вы оба.</p>
+    </section>
+
+    <section class="help-section">
+      <h3>Уровень эксперимента</h3>
+      <p>Сверху главного экрана — переключатель <b>«Лёгкий / Средний»</b>. Включай оба или один из них.</p>
+      <ul>
+        <li><span class="dot dot-easy"></span><b>Лёгкий</b> — обычное, проверенное</li>
+        <li><span class="dot dot-medium"></span><b>Средний</b> — требует решимости, выход из зоны комфорта</li>
+      </ul>
+      <p>Если включён только лёгкий — варианты среднего уровня не выпадут вообще.</p>
+    </section>
+
+    <section class="help-section">
+      <h3>Критерии и тумблеры</h3>
+      <p>Каждый критерий (Настроение, Место, Позы…) — это карточка с тумблером. Если тумблер выключен, этот критерий вообще не участвует в раскладе.</p>
+      <p>Например, не хочешь сегодня зацикливаться на длительности акта — выключай.</p>
+    </section>
+
+    <section class="help-section">
+      <h3>Бросок и замки</h3>
+      <p>Кнопка <b>«Бросить»</b> — собирает новый расклад из включённых критериев.</p>
+      <p>Возле каждого результата есть значок <span class="ico">○</span>. Нажми — он станет <span class="ico">◆</span>, и при следующем броске этот пункт не изменится.</p>
+      <p>Кнопка <span class="ico">⟲</span> рядом с «Бросить» — перебрасывает только незалоченное. Удобно, когда понравилась поза, но хочется сменить место.</p>
+    </section>
+
+    <section class="help-section">
+      <h3>Настройка значений</h3>
+      <p>На главном экране ты видишь только названия критериев — что именно может выпасть, скрыто. Чтобы это настроить, нажми <b>шестерёнку</b> <span class="ico">⚙</span> внизу или сделай долгое нажатие на заголовок «Ночной сценарий».</p>
+      <p>В админке раскрой любой критерий и галочками выбери, что может выпадать. Кнопки сверху помогут массово: «Включить всё», «Только лёгкое», «Сброс».</p>
+    </section>
+
+    <section class="help-section help-section--warning">
+      <h3>Стоп-слово</h3>
+      <p>Поле в красной рамке. Впишите слово, которое любой из вас может сказать, чтобы остановиться. Это базовое правило безопасности — особенно когда пробуете что-то новое.</p>
+      <p>Слово должно быть таким, что в обычной речи вы его не используете — например, «красный» или «карамель».</p>
+    </section>
+
+    <section class="help-section">
+      <h3>История</h3>
+      <p>Внизу страницы хранятся последние 10 раскладов. Кнопка <span class="ico">↺</span> — вернуть тот расклад в основной экран.</p>
+    </section>
+
+    <section class="help-section help-section--accent">
+      <h3>Совет</h3>
+      <p>Перед первым броском зайди в админку и пройдись по критериям — выключи всё, что вам не подходит. Чем точнее настройка, тем приятнее результат.</p>
+    </section>
+
+    <button class="help-cta" id="helpCta">Поехали ◆</button>
+
+  </div>
+
+<script>
+  // Возврат назад. По умолчанию — history.back(). Если файл открыт напрямую — закрывает вкладку или ведёт на главную.
+  function goBack() {
+    if (window.history.length > 1) {
+      window.history.back();
+    } else {
+      // если истории нет — попробуем перейти на главный файл
+      window.location.href = 'main.html';
+    }
+  }
+
+  document.getElementById('helpBack').addEventListener('click', goBack);
+  document.getElementById('helpCta').addEventListener('click', goBack);
+</script>
+
+</body>
+</html>

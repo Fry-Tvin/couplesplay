@@ -1,0 +1,4518 @@
+{
+  "version": 3,
+  "source": "scenario config v3.xlsx",
+  "levels": {
+    "easy": {
+      "label": "Лёгкий",
+      "short": "e",
+      "color": "var(--green)"
+    },
+    "medium": {
+      "label": "Средний",
+      "short": "m",
+      "color": "var(--yellow)"
+    },
+    "extra": {
+      "label": "Экстра",
+      "short": "x",
+      "color": "var(--rose)"
+    }
+  },
+  "categories": [
+    {
+      "id": "mood",
+      "detail": "base",
+      "name": "Настроение",
+      "sub": "общая атмосфера",
+      "type": "chips",
+      "order": 1,
+      "enabled": true
+    },
+    {
+      "id": "tempo",
+      "detail": "extended",
+      "name": "Темп",
+      "sub": "физика движения",
+      "type": "chips",
+      "order": 2,
+      "enabled": true
+    },
+    {
+      "id": "leader",
+      "detail": "extended",
+      "name": "Кто ведёт",
+      "sub": "инициатор по ходу",
+      "type": "chips",
+      "order": 3,
+      "enabled": true
+    },
+    {
+      "id": "ritual",
+      "detail": "extended",
+      "name": "Ритуал начала",
+      "sub": "переход в режим",
+      "type": "chips",
+      "order": 4,
+      "enabled": true
+    },
+    {
+      "id": "foreplay",
+      "detail": "base",
+      "name": "Прелюдия",
+      "sub": "формат",
+      "type": "chips",
+      "order": 5,
+      "enabled": true,
+      "multi": 2
+    },
+    {
+      "id": "foreplayDur",
+      "detail": "extended",
+      "name": "Длительность прелюдии",
+      "sub": "минуты",
+      "type": "range",
+      "order": 6,
+      "enabled": true,
+      "min": 5,
+      "max": 60,
+      "step": 5,
+      "defMin": 15,
+      "defMax": 30,
+      "unit": "мин",
+      "note": "Длительность прелюдии"
+    },
+    {
+      "id": "twist",
+      "detail": "full",
+      "name": "Фишка ночи",
+      "sub": "одно правило сверху",
+      "type": "chips",
+      "order": 7,
+      "enabled": true
+    },
+    {
+      "id": "forbidden",
+      "detail": "full",
+      "name": "Запретное действие",
+      "sub": "что нельзя этой ночью",
+      "type": "chips",
+      "order": 8,
+      "enabled": true
+    },
+    {
+      "id": "limitedBody",
+      "detail": "full",
+      "name": "Что используем",
+      "sub": "руки/рот/тело",
+      "type": "chips",
+      "order": 9,
+      "enabled": true
+    },
+    {
+      "id": "scenario",
+      "detail": "full",
+      "name": "Сценарий / роль",
+      "sub": "лёгкий ролеплей",
+      "type": "chips",
+      "order": 10,
+      "enabled": true
+    },
+    {
+      "id": "poses",
+      "detail": "base",
+      "name": "Позы",
+      "sub": "выпадает 3 случайных",
+      "type": "chips",
+      "order": 11,
+      "enabled": true,
+      "multi": 3
+    },
+    {
+      "id": "place",
+      "detail": "base",
+      "name": "Место (старт)",
+      "sub": "где начнёте",
+      "type": "chips",
+      "order": 12,
+      "enabled": true
+    },
+    {
+      "id": "finishPlace",
+      "detail": "full",
+      "name": "Место кульминации",
+      "sub": "где заканчиваем",
+      "type": "chips",
+      "order": 13,
+      "enabled": true
+    },
+    {
+      "id": "toys",
+      "detail": "full",
+      "name": "Игрушки и аксессуары",
+      "sub": "что используем",
+      "type": "chips",
+      "order": 14,
+      "enabled": true,
+      "multi": 2
+    },
+    {
+      "id": "triggers",
+      "detail": "full",
+      "name": "Личные триггеры",
+      "sub": "заранее обсуждённые",
+      "type": "chips",
+      "order": 15,
+      "enabled": true
+    },
+    {
+      "id": "dress",
+      "detail": "extended",
+      "name": "Дресс-код",
+      "sub": "с чего начинаете",
+      "type": "chips",
+      "order": 16,
+      "enabled": true
+    },
+    {
+      "id": "focus",
+      "detail": "full",
+      "name": "Фокус внимания",
+      "sub": "кто получает больше",
+      "type": "chips",
+      "order": 17,
+      "enabled": true
+    },
+    {
+      "id": "first",
+      "detail": "full",
+      "name": "Кто кончает первым",
+      "sub": "цель ночи",
+      "type": "chips",
+      "order": 18,
+      "enabled": true
+    },
+    {
+      "id": "finish",
+      "detail": "full",
+      "name": "Куда кончает он",
+      "sub": "",
+      "type": "chips",
+      "order": 19,
+      "enabled": true
+    },
+    {
+      "id": "duration",
+      "detail": "base",
+      "name": "Длительность акта",
+      "sub": "минуты",
+      "type": "range",
+      "order": 20,
+      "enabled": true,
+      "min": 10,
+      "max": 120,
+      "step": 5,
+      "defMin": 20,
+      "defMax": 45,
+      "unit": "мин",
+      "note": "Длительность основного акта"
+    },
+    {
+      "id": "sounds",
+      "detail": "full",
+      "name": "Звуки",
+      "sub": "громкость",
+      "type": "chips",
+      "order": 21,
+      "enabled": true
+    },
+    {
+      "id": "ambient",
+      "detail": "extended",
+      "name": "Атмосфера",
+      "sub": "свет, музыка",
+      "type": "chips",
+      "order": 22,
+      "enabled": true,
+      "multi": 2
+    },
+    {
+      "id": "novelty",
+      "detail": "full",
+      "name": "Уровень эксперимента",
+      "sub": "сколько новинок за ночь",
+      "type": "chips",
+      "order": 23,
+      "enabled": true
+    },
+    {
+      "id": "wild",
+      "detail": "extended",
+      "name": "Дикая карта",
+      "sub": "неожиданное задание",
+      "type": "chips",
+      "order": 24,
+      "enabled": true
+    },
+    {
+      "id": "afterCare",
+      "detail": "base",
+      "name": "Финал ночи",
+      "sub": "что после",
+      "type": "chips",
+      "order": 25,
+      "enabled": true
+    }
+  ],
+  "values": {
+    "mood": [
+      {
+        "id": "soft",
+        "text": "Нежно и медленно",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "soft",
+          "slow"
+        ],
+        "note": ""
+      },
+      {
+        "id": "romantic",
+        "text": "Романтично, со взглядом в глаза",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "soft"
+        ],
+        "note": ""
+      },
+      {
+        "id": "play",
+        "text": "Игриво и весело",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "fun"
+        ],
+        "note": ""
+      },
+      {
+        "id": "passion",
+        "text": "Страстно и жадно",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "fast",
+          "intense"
+        ],
+        "note": ""
+      },
+      {
+        "id": "massage",
+        "text": "Чувственный массаж",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "soft",
+          "slow",
+          "oil"
+        ],
+        "note": ""
+      },
+      {
+        "id": "hungry",
+        "text": "Изголодавшиеся",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "fast",
+          "intense"
+        ],
+        "note": ""
+      },
+      {
+        "id": "teasing",
+        "text": "Дразнящее, на грани",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "edge"
+        ],
+        "note": ""
+      },
+      {
+        "id": "dom",
+        "text": "Доминирование/подчинение",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "dom",
+          "intense",
+          "voice"
+        ],
+        "note": "требует голоса"
+      },
+      {
+        "id": "rough",
+        "text": "Жёстко и грубо",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "rough",
+          "intense"
+        ],
+        "note": ""
+      },
+      {
+        "id": "worship",
+        "text": "Поклонение телу друг друга",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "soft"
+        ],
+        "note": ""
+      },
+      {
+        "id": "animalistic",
+        "text": "Животная похоть",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "rough",
+          "fast"
+        ],
+        "note": ""
+      }
+    ],
+    "tempo": [
+      {
+        "id": "smooth",
+        "text": "Медленно и плавно",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "slow"
+        ],
+        "note": ""
+      },
+      {
+        "id": "steady",
+        "text": "Размеренно",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "crescendo",
+        "text": "С нарастанием",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "wave",
+        "text": "Волнами (быстро-медленно)",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "broken",
+        "text": "Рваный (медленно→быстро→стоп)",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "edge"
+        ],
+        "note": ""
+      },
+      {
+        "id": "tease_pause",
+        "text": "С паузами на 30 сек",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "edge"
+        ],
+        "note": ""
+      },
+      {
+        "id": "hard_start",
+        "text": "Жёстко с самого начала",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "intense",
+          "fast"
+        ],
+        "note": ""
+      },
+      {
+        "id": "marathon",
+        "text": "Долго и упорно (без спешки)",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "edge_cycles",
+        "text": "Несколько подходов с edging",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "edge"
+        ],
+        "note": ""
+      }
+    ],
+    "leader": [
+      {
+        "id": "natural",
+        "text": "Как пойдёт, оба активны",
+        "level": "easy",
+        "enabled": true,
+        "weight": 2.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "him_all",
+        "text": "Он ведёт всю ночь",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "dom_him"
+        ],
+        "note": ""
+      },
+      {
+        "id": "her_all",
+        "text": "Она ведёт всю ночь",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "dom_her"
+        ],
+        "note": ""
+      },
+      {
+        "id": "switch_10",
+        "text": "По очереди, меняемся каждые 10 мин",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "first_touch",
+        "text": "Ведёт тот, кто первый дотронется",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "sighted",
+        "text": "Ведёт тот, у кого глаза открыты",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "needs_blind"
+        ],
+        "note": "требует завязанных глаз у одного"
+      },
+      {
+        "id": "coin_flip",
+        "text": "Бросаем монетку перед стартом",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "her_strict",
+        "text": "Она диктует каждое движение",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "dom_her",
+          "voice"
+        ],
+        "note": ""
+      },
+      {
+        "id": "him_strict",
+        "text": "Он диктует каждое движение",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "dom_him",
+          "voice"
+        ],
+        "note": ""
+      }
+    ],
+    "ritual": [
+      {
+        "id": "just_start",
+        "text": "Просто начать без подготовки",
+        "level": "easy",
+        "enabled": true,
+        "weight": 2.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "long_kiss",
+        "text": "Минута поцелуя без рук",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "undress_silent",
+        "text": "Раздеть друг друга молча",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "shower_before",
+        "text": "Совместный душ перед",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "dinner",
+        "text": "Ужин при свечах",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "long_warmup"
+        ],
+        "note": ""
+      },
+      {
+        "id": "dance_song",
+        "text": "Танец под одну песню",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "music"
+        ],
+        "note": ""
+      },
+      {
+        "id": "letter",
+        "text": "Прочитать друг другу записку",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "bath_together",
+        "text": "Принять ванну вместе",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "eye_5min",
+        "text": "5 минут смотреть в глаза молча",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "wish_cards",
+        "text": "Каждый пишет 3 желания на карточках",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": "выбираете 1 у партнёра"
+      },
+      {
+        "id": "strip_dance",
+        "text": "Один танцует и раздевается",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "massage_gift",
+        "text": "15 мин массажа партнёру в подарок",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "oil"
+        ],
+        "note": ""
+      },
+      {
+        "id": "wine_bath",
+        "text": "Вино в ванне с пеной",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "photo_session",
+        "text": "Сначала эротичная фотосессия",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "mirror_pose",
+        "text": "Смотрите вместе в зеркало, раздеваясь",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "mirror"
+        ],
+        "note": ""
+      }
+    ],
+    "foreplay": [
+      {
+        "id": "kisses",
+        "text": "Долгие поцелуи в губы",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "soft"
+        ],
+        "note": ""
+      },
+      {
+        "id": "neck_kisses",
+        "text": "Поцелуи в шею и ключицы",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "soft"
+        ],
+        "note": ""
+      },
+      {
+        "id": "body_kisses",
+        "text": "Поцелуи по всему телу",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "massage_fp",
+        "text": "Массаж с маслом",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "oil",
+          "soft"
+        ],
+        "note": ""
+      },
+      {
+        "id": "striptease",
+        "text": "Стриптиз друг другу",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "clothes"
+        ],
+        "note": "нужна одежда"
+      },
+      {
+        "id": "oral",
+        "text": "Оральные ласки (он ей)",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "oral"
+        ],
+        "note": ""
+      },
+      {
+        "id": "oral_her_him",
+        "text": "Оральные ласки (она ему)",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "oral"
+        ],
+        "note": ""
+      },
+      {
+        "id": "oral_69",
+        "text": "Взаимные оральные ласки",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "oral"
+        ],
+        "note": ""
+      },
+      {
+        "id": "tease",
+        "text": "Дразнить через одежду",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "clothes",
+          "slow"
+        ],
+        "note": ""
+      },
+      {
+        "id": "bite",
+        "text": "Лёгкие укусы и царапины",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "intense"
+        ],
+        "note": ""
+      },
+      {
+        "id": "manual_her",
+        "text": "Длительная мануальная ласка ей",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "manual_him",
+        "text": "Длительная мануальная ласка ему",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "food_play",
+        "text": "Фрукты/мёд/шоколад на теле",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "feather_tease",
+        "text": "Перо/мех по всему телу",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "soft"
+        ],
+        "note": ""
+      },
+      {
+        "id": "ice_play",
+        "text": "Лёд по соскам и коже",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "cold"
+        ],
+        "note": ""
+      },
+      {
+        "id": "hot_oil",
+        "text": "Горячее масло струйкой",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "oil"
+        ],
+        "note": ""
+      },
+      {
+        "id": "edging_fp",
+        "text": "Подвести почти до края и стоп",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "edge"
+        ],
+        "note": ""
+      },
+      {
+        "id": "wax_play",
+        "text": "Капли низкотемпературного воска",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "intense"
+        ],
+        "note": "спец. свечи!"
+      },
+      {
+        "id": "mutual_self",
+        "text": "Смотреть, как партнёр ласкает себя",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "rope_light",
+        "text": "Лёгкая обвязка верёвкой/лентами",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "restraint"
+        ],
+        "note": ""
+      },
+      {
+        "id": "dirty_talk",
+        "text": "Грязные разговоры",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "voice"
+        ],
+        "note": ""
+      },
+      {
+        "id": "reading_erot",
+        "text": "Чтение эротического вслух",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "voice"
+        ],
+        "note": ""
+      }
+    ],
+    "twist": [
+      {
+        "id": "none",
+        "text": "Без особой фишки",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "eye_contact",
+        "text": "Постоянный зрительный контакт",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "talk",
+        "text": "Постоянно говорить друг с другом",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "voice"
+        ],
+        "note": ""
+      },
+      {
+        "id": "silent",
+        "text": "Нельзя говорить",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "no_voice"
+        ],
+        "note": ""
+      },
+      {
+        "id": "whisper_only",
+        "text": "Только шёпотом",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "quiet"
+        ],
+        "note": ""
+      },
+      {
+        "id": "slow_only",
+        "text": "Только медленные движения",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "slow"
+        ],
+        "note": ""
+      },
+      {
+        "id": "mirror",
+        "text": "Зеркало рядом, смотрите",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "mirror"
+        ],
+        "note": ""
+      },
+      {
+        "id": "blind_one",
+        "text": "Глаза партнёра завязаны",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "blind_partial"
+        ],
+        "note": ""
+      },
+      {
+        "id": "blind_both",
+        "text": "Глаза завязаны у обоих по очереди",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "blind_full"
+        ],
+        "note": ""
+      },
+      {
+        "id": "no_hands",
+        "text": "Нельзя касаться руками",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "no_hands"
+        ],
+        "note": ""
+      },
+      {
+        "id": "no_kissing",
+        "text": "Нельзя целоваться",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "edge20",
+        "text": "Нельзя кончать первые 20 минут",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "edge"
+        ],
+        "note": ""
+      },
+      {
+        "id": "count_orgasms",
+        "text": "Считать оргазмы вслух",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "voice"
+        ],
+        "note": ""
+      },
+      {
+        "id": "narrate",
+        "text": "Партнёр описывает что чувствует",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "voice"
+        ],
+        "note": ""
+      },
+      {
+        "id": "restraint",
+        "text": "Один привязан к кровати",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "restraint"
+        ],
+        "note": ""
+      },
+      {
+        "id": "dirty_only",
+        "text": "Только грязные слова, никаких имён",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "voice"
+        ],
+        "note": ""
+      },
+      {
+        "id": "switch_role",
+        "text": "В середине меняемся ролями",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "time_limit",
+        "text": "Жёсткий таймер на каждый этап",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "photo_during",
+        "text": "Один снимает на телефон",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": "согласие!"
+      },
+      {
+        "id": "video_self",
+        "text": "Записать видео для себя",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": "согласие!"
+      },
+      {
+        "id": "three_orgasms",
+        "text": "Цель — минимум 3 её оргазма",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "no_touch_him",
+        "text": "Нельзя трогать его член руками",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "no_touch_her",
+        "text": "Нельзя трогать её клитор руками",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      }
+    ],
+    "forbidden": [
+      {
+        "id": "nothing",
+        "text": "Без запретов",
+        "level": "easy",
+        "enabled": true,
+        "weight": 2.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "no_lips_kiss",
+        "text": "Нельзя целовать в губы",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "no_breast",
+        "text": "Нельзя трогать грудь",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "no_eye",
+        "text": "Нельзя смотреть в глаза",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "no_full_strip",
+        "text": "Нельзя раздеваться полностью",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "clothes_on"
+        ],
+        "note": ""
+      },
+      {
+        "id": "no_hands_only",
+        "text": "Без рук (только тело и рот)",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "no_hands"
+        ],
+        "note": ""
+      },
+      {
+        "id": "no_top",
+        "text": "Нельзя сверху",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "no_initiative",
+        "text": "Одному нельзя проявлять инициативу",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "no_speak",
+        "text": "Нельзя произносить имя партнёра",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "no_orgasm_him",
+        "text": "Ему нельзя кончить (только она)",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "no_orgasm_her",
+        "text": "Ей нельзя кончить (только он)",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "no_position",
+        "text": "Нельзя менять позу до финала",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "no_underwear",
+        "text": "Нельзя снимать всё бельё",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "clothes_on"
+        ],
+        "note": ""
+      }
+    ],
+    "limitedBody": [
+      {
+        "id": "all_allowed",
+        "text": "Всё разрешено",
+        "level": "easy",
+        "enabled": true,
+        "weight": 2.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "hands_only",
+        "text": "Только руки",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "no_mouth"
+        ],
+        "note": ""
+      },
+      {
+        "id": "mouth_only",
+        "text": "Только рот",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "no_hands"
+        ],
+        "note": ""
+      },
+      {
+        "id": "body_only",
+        "text": "Только тело (без рук и рта)",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "no_hands",
+          "no_mouth"
+        ],
+        "note": ""
+      },
+      {
+        "id": "one_hand",
+        "text": "Только одна рука",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "no_genital_touch",
+        "text": "Нельзя касаться гениталий руками",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      }
+    ],
+    "scenario": [
+      {
+        "id": "none",
+        "text": "Без сценария",
+        "level": "easy",
+        "enabled": true,
+        "weight": 2.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "after_long",
+        "text": "Долго не виделись",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "morning",
+        "text": "Утренний сюрприз (один спит)",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "date_night",
+        "text": "Свидание как в начале отношений",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "strangers",
+        "text": "Незнакомцы, познакомились сегодня",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "forbidden",
+        "text": "Запрещённая встреча — нельзя шуметь",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "quiet"
+        ],
+        "note": ""
+      },
+      {
+        "id": "massage_role",
+        "text": "Массажист и клиентка",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "oil"
+        ],
+        "note": ""
+      },
+      {
+        "id": "photo_shoot",
+        "text": "Эротичная фотосессия (он/она снимает)",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "boss",
+        "text": "Босс и подчинённый",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "dom"
+        ],
+        "note": ""
+      },
+      {
+        "id": "doctor",
+        "text": "Доктор и пациент",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "teacher",
+        "text": "Учитель и ученик",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "hotel_meet",
+        "text": "Встреча в отеле — сделаем вид",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "caught",
+        "text": "\"Поймал/а на горячем\" в душе/переодевании",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "silent_film",
+        "text": "Немое кино — играем без слов",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "no_voice"
+        ],
+        "note": ""
+      },
+      {
+        "id": "master_slave",
+        "text": "Госпожа/господин и подчинённый",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "dom"
+        ],
+        "note": ""
+      },
+      {
+        "id": "auction",
+        "text": "Купил/а партнёра на ночь",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "dom"
+        ],
+        "note": ""
+      },
+      {
+        "id": "voyeur",
+        "text": "Один играет роль наблюдателя",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      }
+    ],
+    "poses": [
+      {
+        "id": "missionary",
+        "text": "Миссионерская",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "lying",
+          "bed_ok"
+        ],
+        "note": ""
+      },
+      {
+        "id": "cowgirl",
+        "text": "Наездница",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "sitting",
+          "bed_ok",
+          "chair_ok",
+          "top"
+        ],
+        "note": ""
+      },
+      {
+        "id": "reverse_cg",
+        "text": "Обратная наездница",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "sitting",
+          "bed_ok",
+          "chair_ok",
+          "top"
+        ],
+        "note": ""
+      },
+      {
+        "id": "doggy",
+        "text": "Догги-стайл",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "kneeling",
+          "bed_ok",
+          "floor_ok"
+        ],
+        "note": ""
+      },
+      {
+        "id": "spoons",
+        "text": "Ложки",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "lying",
+          "bed_ok"
+        ],
+        "note": ""
+      },
+      {
+        "id": "lotus",
+        "text": "Лотос (он сидит, она сверху)",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "sitting",
+          "bed_ok",
+          "chair_ok",
+          "floor_ok"
+        ],
+        "note": ""
+      },
+      {
+        "id": "standing",
+        "text": "Стоя у стены",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "standing",
+          "wall_needed"
+        ],
+        "note": ""
+      },
+      {
+        "id": "edge_table",
+        "text": "На краю кровати/стола",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "edge_surface",
+          "bed_ok",
+          "table_ok"
+        ],
+        "note": ""
+      },
+      {
+        "id": "chair_face",
+        "text": "Сидя на стуле лицом к лицу",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "chair_needed"
+        ],
+        "note": ""
+      },
+      {
+        "id": "sixtynine",
+        "text": "69",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "oral",
+          "lying",
+          "bed_ok"
+        ],
+        "note": ""
+      },
+      {
+        "id": "prone",
+        "text": "На животе (он сверху)",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "lying",
+          "bed_ok"
+        ],
+        "note": ""
+      },
+      {
+        "id": "wall_behind",
+        "text": "Прижатая к стене сзади",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "standing",
+          "wall_needed"
+        ],
+        "note": ""
+      },
+      {
+        "id": "butterfly",
+        "text": "Бабочка (она на спине, он держит ноги)",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "lying",
+          "bed_ok"
+        ],
+        "note": ""
+      },
+      {
+        "id": "amazon",
+        "text": "Амазонка (она сверху, ноги по бокам)",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "sitting",
+          "bed_ok",
+          "top"
+        ],
+        "note": ""
+      },
+      {
+        "id": "crab",
+        "text": "Краб (он на руках, она на нём)",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "scissors",
+        "text": "Ножницы (поперёк друг друга)",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "lying",
+          "bed_ok"
+        ],
+        "note": ""
+      },
+      {
+        "id": "standing_lift",
+        "text": "На руках, прижата к стене",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "standing",
+          "wall_needed"
+        ],
+        "note": "требует силы"
+      },
+      {
+        "id": "face_sitting",
+        "text": "Она сидит на лице",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "oral"
+        ],
+        "note": ""
+      },
+      {
+        "id": "face_sit_him",
+        "text": "Он сидит на лице",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "oral"
+        ],
+        "note": ""
+      },
+      {
+        "id": "corner",
+        "text": "Угол кровати/дивана",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "edge_surface",
+          "bed_ok",
+          "sofa_ok"
+        ],
+        "note": ""
+      },
+      {
+        "id": "pretzel",
+        "text": "Крендель (она на боку, он на коленях)",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "lying",
+          "bed_ok"
+        ],
+        "note": ""
+      },
+      {
+        "id": "doggy_low",
+        "text": "Догги, она прижата к кровати",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "lying",
+          "bed_ok"
+        ],
+        "note": ""
+      },
+      {
+        "id": "cowgirl_lay",
+        "text": "Наездница лёжа (он на спине, она лежит)",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "lying",
+          "bed_ok",
+          "top"
+        ],
+        "note": ""
+      },
+      {
+        "id": "shoulder",
+        "text": "Её ноги на его плечах",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "lying",
+          "bed_ok"
+        ],
+        "note": ""
+      },
+      {
+        "id": "side_by_side",
+        "text": "Лицом к лицу, оба на боку",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "lying",
+          "bed_ok"
+        ],
+        "note": ""
+      }
+      ,
+{
+  "id": "wheelbarrow",
+  "text": "Тачка (она на руках, он держит её ноги)",
+  "level": "extra",
+  "enabled": true,
+  "weight": 1.0,
+  "tags": [
+    "standing"
+  ],
+  "note": "требует силы рук у обоих"
+},
+{
+  "id": "bridge",
+  "text": "Мостик (она в позе мостика, он сверху)",
+  "level": "extra",
+  "enabled": true,
+  "weight": 1.0,
+  "tags": [
+    "lying",
+    "bed_ok",
+    "floor_ok"
+  ],
+  "note": "требует хорошей растяжки"
+},
+{
+  "id": "deck_chair",
+  "text": "Шезлонг (она с ногами на плечах, он держит её бёдра)",
+  "level": "extra",
+  "enabled": true,
+  "weight": 1.0,
+  "tags": [
+    "lying",
+    "bed_ok"
+  ],
+  "note": "глубокий угол, начинать с медленного темпа"
+},
+{
+  "id": "suspended",
+  "text": "На весу (он стоит, она обхватывает его, ноги в воздухе)",
+  "level": "extra",
+  "enabled": true,
+  "weight": 1.0,
+  "tags": [
+    "standing"
+  ],
+  "note": "без опоры, требует силы у партнёра"
+},
+{
+  "id": "g_whiz",
+  "text": "G-whiz (она на спине, ноги закинуты за голову)",
+  "level": "extra",
+  "enabled": true,
+  "weight": 1.0,
+  "tags": [
+    "lying",
+    "bed_ok"
+  ],
+  "note": "требует растяжки, очень глубокий угол"
+},
+{
+  "id": "stairs",
+  "text": "На лестнице (один на ступени выше)",
+  "level": "extra",
+  "enabled": true,
+  "weight": 1.0,
+  "tags": [
+    "stairs_needed"
+  ],
+  "note": "разница уровней даёт необычный угол"
+}
+    ],
+    "place": [
+      {
+        "id": "bed",
+        "text": "Кровать",
+        "level": "easy",
+        "enabled": true,
+        "weight": 2.0,
+        "tags": [
+          "bed"
+        ],
+        "note": ""
+      },
+      {
+        "id": "sofa",
+        "text": "Диван",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "sofa"
+        ],
+        "note": ""
+      },
+      {
+        "id": "floor",
+        "text": "Пол / ковёр",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "floor"
+        ],
+        "note": ""
+      },
+      {
+        "id": "chair",
+        "text": "Кресло",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "chair"
+        ],
+        "note": ""
+      },
+      {
+        "id": "kitchen",
+        "text": "Кухонный стол / столешница",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "table"
+        ],
+        "note": ""
+      },
+      {
+        "id": "bath",
+        "text": "Ванная / душ",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "wet"
+        ],
+        "note": ""
+      },
+      {
+        "id": "balcony",
+        "text": "Балкон или окно",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "outside"
+        ],
+        "note": ""
+      },
+      {
+        "id": "hallway",
+        "text": "Прихожая (у двери)",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "wall",
+          "mirror_maybe"
+        ],
+        "note": ""
+      },
+      {
+        "id": "dressing",
+        "text": "Гардеробная",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "desk",
+        "text": "Рабочий стол / стол",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "table"
+        ],
+        "note": ""
+      },
+      {
+        "id": "staircase",
+        "text": "Лестница / ступеньки",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "car",
+        "text": "Машина",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "window",
+        "text": "Прямо у окна",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "mirror_room",
+        "text": "Перед большим зеркалом",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "mirror"
+        ],
+        "note": ""
+      },
+      {
+        "id": "unusual",
+        "text": "В неожиданном месте дома",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": "место выберете в моменте"
+      }
+    ],
+    "finishPlace": [
+      {
+        "id": "same",
+        "text": "Там же где начали",
+        "level": "easy",
+        "enabled": true,
+        "weight": 2.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "bedroom",
+        "text": "Перейти в спальню",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "floor_end",
+        "text": "На полу",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "shower_end",
+        "text": "В душе",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "wet"
+        ],
+        "note": ""
+      },
+      {
+        "id": "flexible",
+        "text": "Где захотим в моменте",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "mirror_end",
+        "text": "Перед зеркалом",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "mirror"
+        ],
+        "note": ""
+      },
+      {
+        "id": "two_places",
+        "text": "Сменить место минимум 1 раз",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      }
+    ],
+    "toys": [
+      {
+        "id": "none",
+        "text": "Ничего, только тела",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "silk",
+        "text": "Шёлковый шарф / повязка на глаза",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "blind_tool"
+        ],
+        "note": ""
+      },
+      {
+        "id": "feather",
+        "text": "Перо",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "soft"
+        ],
+        "note": ""
+      },
+      {
+        "id": "ice",
+        "text": "Лёд",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "cold",
+          "dry_only"
+        ],
+        "note": ""
+      },
+      {
+        "id": "oil",
+        "text": "Тёплое масло",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "oil",
+          "dry_only"
+        ],
+        "note": ""
+      },
+      {
+        "id": "lube_hot",
+        "text": "Лубрикант с эффектом",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "massage_oil",
+        "text": "Массажное масло",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "oil"
+        ],
+        "note": ""
+      },
+      {
+        "id": "vibrator",
+        "text": "Вибратор",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "electric",
+          "dry_only"
+        ],
+        "note": ""
+      },
+      {
+        "id": "wand",
+        "text": "Большой вибромассажёр (wand)",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "electric",
+          "dry_only"
+        ],
+        "note": ""
+      },
+      {
+        "id": "cuffs",
+        "text": "Наручники / манжеты",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "restraint",
+          "hands_bound"
+        ],
+        "note": ""
+      },
+      {
+        "id": "rope_easy",
+        "text": "Мягкие верёвки / ленты",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "restraint"
+        ],
+        "note": ""
+      },
+      {
+        "id": "spank",
+        "text": "Лёгкий шлепок ладонью",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "intense"
+        ],
+        "note": ""
+      },
+      {
+        "id": "paddle",
+        "text": "Шлёпалка / падл",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "intense"
+        ],
+        "note": ""
+      },
+      {
+        "id": "flogger",
+        "text": "Флоггер (плеть с хвостами)",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "intense"
+        ],
+        "note": ""
+      },
+      {
+        "id": "collar",
+        "text": "Ошейник",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "dom"
+        ],
+        "note": ""
+      },
+      {
+        "id": "gag",
+        "text": "Кляп",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "no_voice"
+        ],
+        "note": ""
+      },
+      {
+        "id": "plug",
+        "text": "Анальная пробка",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "cock_ring",
+        "text": "Эрекционное кольцо",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "couples_toy",
+        "text": "Игрушка для пар (внутрь во время акта)",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "nipple_clamps",
+        "text": "Зажимы для сосков",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "intense"
+        ],
+        "note": ""
+      },
+      {
+        "id": "wax_candle",
+        "text": "Низкотемпературная свеча для воска",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "intense"
+        ],
+        "note": "спец. свечи!"
+      },
+      {
+        "id": "mirror_tool",
+        "text": "Маленькое ручное зеркало",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "mirror"
+        ],
+        "note": ""
+      },
+      {
+        "id": "tens_unit",
+        "text": "Электростимулятор",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "electric"
+        ],
+        "note": ""
+      }
+    ],
+    "triggers": [
+  {
+    "id": "none",
+    "text": "Не используем сегодня",
+    "level": "easy",
+    "weight": 1,
+    "tags": [],
+    "note": "",
+    "enabled": true
+  },
+  {
+    "id": "agreed_word_m",
+    "text": "Договориться на слово-триггер заранее. Один говорит/пишет это слово в течение дня — второй понимает, что вечером будет близость",
+    "level": "medium",
+    "weight": 1,
+    "tags": [],
+    "note": "",
+    "enabled": true
+  },
+  {
+    "id": "agreed_action_m",
+    "text": "Договориться на действие-триггер заранее. Жест при встрече: долгий поцелуй, прикосновение к шее, снять украшение",
+    "level": "medium",
+    "weight": 1,
+    "tags": [],
+    "note": "",
+    "enabled": true
+  },
+  {
+    "id": "agreed_word_x",
+    "text": "Договориться на слово-триггер заранее. Слово или фраза в неожиданный момент дня — сообщение, голосовое",
+    "level": "extra",
+    "weight": 1,
+    "tags": [],
+    "note": "",
+    "enabled": true
+  },
+  {
+    "id": "agreed_action_x",
+    "text": "Договориться на действие-триггер заранее. Жест при встрече в неожиданный момент дня: долгий поцелуй, прикосновение к шее, снять украшение",
+    "level": "extra",
+    "weight": 1,
+    "tags": [],
+    "note": "",
+    "enabled": true
+  }
+    ],
+    "dress": [
+      {
+        "id": "full_clothes",
+        "text": "Полностью одеты (как с улицы)",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "clothes"
+        ],
+        "note": ""
+      },
+      {
+        "id": "home_wear",
+        "text": "В домашней одежде",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "clothes"
+        ],
+        "note": ""
+      },
+      {
+        "id": "lingerie",
+        "text": "Только бельё",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "clothes"
+        ],
+        "note": ""
+      },
+      {
+        "id": "his_shirt",
+        "text": "Его рубашка на ней",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "clothes"
+        ],
+        "note": ""
+      },
+      {
+        "id": "stockings",
+        "text": "Чулки и каблуки",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "clothes"
+        ],
+        "note": ""
+      },
+      {
+        "id": "naked",
+        "text": "Голышом сразу",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "no_clothes"
+        ],
+        "note": ""
+      },
+      {
+        "id": "asymmetric",
+        "text": "Один одет, другой раздет",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "clothes"
+        ],
+        "note": ""
+      },
+      {
+        "id": "roleplay",
+        "text": "Костюм по сценарию (форма/халат)",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "clothes"
+        ],
+        "note": "связан со сценарием"
+      },
+      {
+        "id": "latex",
+        "text": "Латекс / винил",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "clothes"
+        ],
+        "note": ""
+      },
+      {
+        "id": "corset",
+        "text": "Корсет",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "clothes"
+        ],
+        "note": ""
+      },
+      {
+        "id": "mask",
+        "text": "Маски на лицах",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "half_dress",
+        "text": "Не до конца раздеты (юбка приподнята)",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "clothes_on"
+        ],
+        "note": ""
+      },
+      {
+        "id": "rip_off",
+        "text": "Одежда для разрывания",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": "старая, не жалко"
+      }
+    ],
+    "focus": [
+      {
+        "id": "her_focus",
+        "text": "Фокус на ней",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "him_focus",
+        "text": "Фокус на нём",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "balanced",
+        "text": "50/50",
+        "level": "easy",
+        "enabled": true,
+        "weight": 2.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "timer",
+        "text": "По таймеру (15 мин каждому)",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "needs_long"
+        ],
+        "note": ""
+      },
+      {
+        "id": "her_only",
+        "text": "Только её удовольствие, он терпит",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "him_only",
+        "text": "Только его удовольствие, она ждёт",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "three_to_one",
+        "text": "3 её оргазма на 1 его",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      }
+    ],
+    "first": [
+      {
+        "id": "her",
+        "text": "Она",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "him",
+        "text": "Он",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "together",
+        "text": "Одновременно",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "whatever",
+        "text": "Не важно",
+        "level": "easy",
+        "enabled": true,
+        "weight": 2.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "her_multi",
+        "text": "Только она (несколько раз)",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "long_session"
+        ],
+        "note": ""
+      },
+      {
+        "id": "her_three",
+        "text": "Она минимум 3 раза",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "long_session"
+        ],
+        "note": ""
+      },
+      {
+        "id": "race",
+        "text": "Соревнование — кто быстрее",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      }
+    ],
+    "finish": [
+      {
+        "id": "inside",
+        "text": "Внутрь",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "breast",
+        "text": "На грудь",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "belly",
+        "text": "На живот",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "face",
+        "text": "На лицо",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "mouth",
+        "text": "В рот",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "back",
+        "text": "На спину/ягодицы",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "her_choice",
+        "text": "Ей решать в моменте",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "his_hand",
+        "text": "В её руку",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "her_hand",
+        "text": "В его руку",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "thighs",
+        "text": "На бёдра",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "on_him",
+        "text": "На него (если она кончает струйно)",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      }
+    ],
+    "sounds": [
+      {
+        "id": "natural",
+        "text": "Как пойдёт",
+        "level": "easy",
+        "enabled": true,
+        "weight": 2.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "loud",
+        "text": "Громко без стеснения",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "hold_back",
+        "text": "Сдерживать звуки (соседи)",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "quiet"
+        ],
+        "note": ""
+      },
+      {
+        "id": "whisper",
+        "text": "Только шёпот",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "quiet"
+        ],
+        "note": ""
+      },
+      {
+        "id": "breath_only",
+        "text": "Только дыхание",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "quiet",
+          "no_voice"
+        ],
+        "note": ""
+      },
+      {
+        "id": "moan_only",
+        "text": "Только стоны, без слов",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "narrate",
+        "text": "Озвучивать, что чувствуете",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "voice"
+        ],
+        "note": ""
+      },
+      {
+        "id": "dirty_talk",
+        "text": "Грязные разговоры",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "voice"
+        ],
+        "note": ""
+      },
+      {
+        "id": "beg",
+        "text": "Один просит/умоляет",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "voice"
+        ],
+        "note": ""
+      },
+      {
+        "id": "count_loud",
+        "text": "Считать вслух движения",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "voice"
+        ],
+        "note": ""
+      }
+    ],
+    "ambient": [
+      {
+        "id": "candles",
+        "text": "Свечи и темнота",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "dark",
+          "romantic"
+        ],
+        "note": ""
+      },
+      {
+        "id": "full_light",
+        "text": "Полный яркий свет",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "bright"
+        ],
+        "note": ""
+      },
+      {
+        "id": "nightlight",
+        "text": "Только ночник",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "dim"
+        ],
+        "note": ""
+      },
+      {
+        "id": "red_light",
+        "text": "Красное освещение",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "dim"
+        ],
+        "note": ""
+      },
+      {
+        "id": "music_slow",
+        "text": "Медленная музыка",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "music"
+        ],
+        "note": ""
+      },
+      {
+        "id": "music_fast",
+        "text": "Ритмичная музыка",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "music"
+        ],
+        "note": ""
+      },
+      {
+        "id": "music_sync",
+        "text": "Музыка задаёт ритм движений",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "music"
+        ],
+        "note": ""
+      },
+      {
+        "id": "silence",
+        "text": "Полная тишина",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "aroma",
+        "text": "Аромасвечи / парфюм",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "romantic"
+        ],
+        "note": ""
+      },
+      {
+        "id": "incense",
+        "text": "Благовония",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "romantic"
+        ],
+        "note": ""
+      },
+      {
+        "id": "fireplace",
+        "text": "Камин/видео камина",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "romantic"
+        ],
+        "note": ""
+      },
+      {
+        "id": "rain_sounds",
+        "text": "Звуки дождя/природы",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "mirror_room",
+        "text": "Комната с зеркалами",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "mirror"
+        ],
+        "note": ""
+      },
+      {
+        "id": "porn_bg",
+        "text": "Эротичный фильм фоном",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      }
+    ],
+    "novelty": [
+      {
+        "id": "safe",
+        "text": "Только проверенное",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "one_new",
+        "text": "1 новинка за ночь",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "two_new",
+        "text": "2 новинки",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "three_new",
+        "text": "3 новинки",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "max_new",
+        "text": "Максимум нового",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      }
+    ],
+    "wild": [
+      {
+        "id": "nothing",
+        "text": "Ничего",
+        "level": "easy",
+        "enabled": true,
+        "weight": 2.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "compliments",
+        "text": "Сказать вслух 3 комплимента телу",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "voice"
+        ],
+        "note": ""
+      },
+      {
+        "id": "photo",
+        "text": "Селфи до/после",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "shower",
+        "text": "Принять душ вместе после",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "swap",
+        "text": "Поменяться ролями инициатора",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "new_request",
+        "text": "Один раз попросить о чём-то новом",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [
+          "voice"
+        ],
+        "note": ""
+      },
+      {
+        "id": "video",
+        "text": "Снять короткое видео для себя",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": "согласие!"
+      },
+      {
+        "id": "body_letter",
+        "text": "Написать слово на теле партнёра",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "gift_after",
+        "text": "Один дарит другому маленький подарок",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "breakfast",
+        "text": "Совместный завтрак с утра",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "rate_each_other",
+        "text": "Оценить ночь по 10-балльной шкале",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "wishlist",
+        "text": "Каждый говорит, чего хотел бы попробовать в следующий раз",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "send_pic",
+        "text": "Отправить друг другу фото на следующий день",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "forbidden_word",
+        "text": "Договоритесь о слове, которое нельзя говорить",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "public_secret",
+        "text": "Носить весь след. день что-то \"помечающее\" под одеждой",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "voice_msg",
+        "text": "Записать голосовое сообщение друг другу",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "mark",
+        "text": "Оставить засос в незаметном месте",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "reverse_role",
+        "text": "Полная смена ролей на ночь",
+        "level": "extra",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      }
+    ],
+    "afterCare": [
+      {
+        "id": "shower_after",
+        "text": "Совместный душ",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "wine_talk",
+        "text": "Вино и разговор",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "order_food",
+        "text": "Заказать еду",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "sleep",
+        "text": "Сразу спать",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "hugs_silent",
+        "text": "Обнимашки молча 10 мин",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "massage_after",
+        "text": "Помассировать друг другу",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "tea_blanket",
+        "text": "Чай и плед",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "pillow_talk",
+        "text": "Откровенный разговор о том, что зашло",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "movie",
+        "text": "Включить фильм",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "second_round",
+        "text": "Второй раунд через 30 мин",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "rate_aloud",
+        "text": "Каждый говорит, что зашло больше всего",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "sleep_naked",
+        "text": "Спать голыми, обнявшись",
+        "level": "easy",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      },
+      {
+        "id": "mutual_self",
+        "text": "Полежать, ласкать себя рядом",
+        "level": "medium",
+        "enabled": true,
+        "weight": 1.0,
+        "tags": [],
+        "note": ""
+      }
+    ]
+  },
+  "rules": [
+    {
+      "type": "BLOCK",
+      "if": "poses:standing",
+      "then": "place:bed",
+      "description": "Стоя у стены — нужна стена",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "poses:wall_behind",
+      "then": "place:bed",
+      "description": "Прижатая к стене — нужна стена",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "poses:standing_lift",
+      "then": "place:bed",
+      "description": "На руках у стены — нужна стена",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "poses:chair_face",
+      "then": "place:bed",
+      "description": "Стул нужен, не кровать",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "toys:cuffs",
+      "then": "twist:no_hands",
+      "description": "Наручники + нельзя касаться руками",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "toys:cuffs",
+      "then": "limitedBody:hands_only",
+      "description": "Наручники + только руки",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "toys:cuffs",
+      "then": "limitedBody:body_only",
+      "description": "Наручники + только тело",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "toys:gag",
+      "then": "twist:talk",
+      "description": "Кляп + надо говорить",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "toys:gag",
+      "then": "sounds:dirty_talk",
+      "description": "Кляп + грязные разговоры",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "toys:gag",
+      "then": "mood:dom",
+      "description": "Кляп у доминирующего — нужны команды",
+      "enabled": false
+    },
+    {
+      "type": "BLOCK",
+      "if": "twist:silent",
+      "then": "mood:dom",
+      "description": "Молчание + доминирование (нужен голос)",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "twist:silent",
+      "then": "sounds:dirty_talk",
+      "description": "Молчание + грязные разговоры",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "twist:silent",
+      "then": "sounds:narrate",
+      "description": "Молчание + озвучивать ощущения",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "place:bath",
+      "then": "toys:vibrator",
+      "description": "Электрика в воде — опасно",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "place:bath",
+      "then": "toys:wand",
+      "description": "Электрика в воде — опасно",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "place:bath",
+      "then": "toys:tens_unit",
+      "description": "Электрика в воде — категорически нельзя",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "place:bath",
+      "then": "toys:oil",
+      "description": "Масло в душе смоется",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "place:bath",
+      "then": "toys:wax_candle",
+      "description": "Воск в воде не работает",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "finishPlace:shower_end",
+      "then": "toys:vibrator",
+      "description": "Электрика в душе — опасно",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "dress:naked",
+      "then": "foreplay:striptease",
+      "description": "Голышом + стриптиз = нечего снимать",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "dress:naked",
+      "then": "foreplay:tease",
+      "description": "Голышом + дразнить через одежду",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "dress:naked",
+      "then": "forbidden:no_full_strip",
+      "description": "Голышом + нельзя раздеваться",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "twist:blind_both",
+      "then": "poses:sixtynine",
+      "description": "69 + завязанные глаза у обоих = опасно",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "twist:blind_both",
+      "then": "poses:standing",
+      "description": "Стоя + оба слепые = травмоопасно",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "twist:blind_both",
+      "then": "poses:standing_lift",
+      "description": "На руках у стены + слепота = травма",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "twist:blind_both",
+      "then": "poses:crab",
+      "description": "Краб + слепота = травма",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "forbidden:no_hands_only",
+      "then": "toys:cuffs",
+      "description": "Без рук + наручники = бессмыслица",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "tempo:hard_start",
+      "then": "mood:soft",
+      "description": "Жёстко сразу + нежно = противоречие",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "tempo:hard_start",
+      "then": "mood:massage",
+      "description": "Жёстко сразу + массаж = противоречие",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "tempo:hard_start",
+      "then": "mood:romantic",
+      "description": "Жёстко сразу + романтика",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "tempo:hard_start",
+      "then": "mood:worship",
+      "description": "Жёстко сразу + поклонение",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "sounds:breath_only",
+      "then": "mood:dom",
+      "description": "Только дыхание + доминирование (команды)",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "sounds:breath_only",
+      "then": "wild:compliments",
+      "description": "Только дыхание + комплименты вслух",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "sounds:breath_only",
+      "then": "sounds:dirty_talk",
+      "description": "Внутренний конфликт",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "scenario:forbidden",
+      "then": "sounds:loud",
+      "description": "\"Тише, нельзя\" + громко",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "scenario:silent_film",
+      "then": "sounds:loud",
+      "description": "Немое кино + громкие звуки",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "scenario:silent_film",
+      "then": "sounds:dirty_talk",
+      "description": "Немое кино + говорим",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "forbidden:no_top",
+      "then": "poses:cowgirl",
+      "description": "Нельзя сверху + наездница",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "forbidden:no_top",
+      "then": "poses:reverse_cg",
+      "description": "Нельзя сверху + обратная наездница",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "forbidden:no_top",
+      "then": "poses:cowgirl_lay",
+      "description": "Нельзя сверху + наездница лёжа",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "forbidden:no_top",
+      "then": "poses:amazon",
+      "description": "Нельзя сверху + амазонка",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "forbidden:no_orgasm_him",
+      "then": "focus:him_focus",
+      "description": "Ему нельзя кончить + фокус на нём",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "forbidden:no_orgasm_her",
+      "then": "focus:her_focus",
+      "description": "Ей нельзя кончить + фокус на ней",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "forbidden:no_orgasm_him",
+      "then": "first:him",
+      "description": "Ему нельзя кончить + он первый",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "forbidden:no_orgasm_her",
+      "then": "first:her_multi",
+      "description": "Ей нельзя кончить + она много раз",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "twist:no_kissing",
+      "then": "foreplay:kisses",
+      "description": "Нельзя целоваться + долгие поцелуи",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "twist:no_kissing",
+      "then": "foreplay:body_kisses",
+      "description": "Нельзя целоваться + поцелуи по телу",
+      "enabled": false
+    },
+    {
+      "type": "BLOCK",
+      "if": "twist:no_touch_him",
+      "then": "foreplay:manual_him",
+      "description": "Нельзя трогать его + мануальная ласка ему",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "twist:no_touch_her",
+      "then": "foreplay:manual_her",
+      "description": "Нельзя трогать её + мануальная ласка ей",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "twist:photo_during",
+      "then": "twist:blind_both",
+      "description": "Фото + оба слепые = странно",
+      "enabled": false
+    },
+    {
+      "type": "BLOCK",
+      "if": "mood:rough",
+      "then": "mood:soft",
+      "description": "Внутренний конфликт",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "twist:edge20",
+      "then": "mood:soft",
+      "description": "Edging + нежное настроение = диссонанс",
+      "enabled": true
+    },
+    {
+      "type": "BLOCK",
+      "if": "twist:restraint",
+      "then": "twist:no_hands",
+      "description": "Привязан + нельзя руками = бессмыслица",
+      "enabled": true
+    },
+    {
+      "type": "WARN",
+      "if": "mood:soft",
+      "then": "twist:edge20",
+      "description": "Нежно vs запрет на оргазм 20 мин",
+      "enabled": true
+    },
+    {
+      "type": "WARN",
+      "if": "mood:soft",
+      "then": "toys:spank",
+      "description": "Нежно + шлепки = диссонанс",
+      "enabled": true
+    },
+    {
+      "type": "WARN",
+      "if": "mood:soft",
+      "then": "toys:paddle",
+      "description": "Нежно + падл",
+      "enabled": true
+    },
+    {
+      "type": "WARN",
+      "if": "mood:soft",
+      "then": "toys:flogger",
+      "description": "Нежно + флоггер",
+      "enabled": true
+    },
+    {
+      "type": "WARN",
+      "if": "mood:soft",
+      "then": "foreplay:bite",
+      "description": "Нежно + укусы",
+      "enabled": true
+    },
+    {
+      "type": "WARN",
+      "if": "mood:romantic",
+      "then": "toys:gag",
+      "description": "Романтика + кляп — спорно",
+      "enabled": true
+    },
+    {
+      "type": "WARN",
+      "if": "mood:massage",
+      "then": "twist:edge20",
+      "description": "Массаж и edging — разные задачи",
+      "enabled": true
+    },
+    {
+      "type": "WARN",
+      "if": "place:balcony",
+      "then": "toys:ice",
+      "description": "Балкон зимой + лёд = слишком холодно",
+      "enabled": true
+    },
+    {
+      "type": "WARN",
+      "if": "place:balcony",
+      "then": "dress:naked",
+      "description": "Балкон + голышом — соседи",
+      "enabled": true
+    },
+    {
+      "type": "WARN",
+      "if": "place:car",
+      "then": "duration:long",
+      "description": "В машине долго не получится",
+      "enabled": true
+    },
+    {
+      "type": "WARN",
+      "if": "place:car",
+      "then": "foreplayDur:long",
+      "description": "В машине долгая прелюдия = неудобно",
+      "enabled": true
+    },
+    {
+      "type": "WARN",
+      "if": "twist:silent",
+      "then": "wild:compliments",
+      "description": "Молчим + комплименты вслух",
+      "enabled": true
+    },
+    {
+      "type": "WARN",
+      "if": "twist:silent",
+      "then": "wild:new_request",
+      "description": "Молчим + просьба голосом",
+      "enabled": true
+    },
+    {
+      "type": "WARN",
+      "if": "scenario:strangers",
+      "then": "wild:compliments",
+      "description": "Незнакомцы и комплименты телу = странно",
+      "enabled": true
+    },
+    {
+      "type": "WARN",
+      "if": "scenario:strangers",
+      "then": "mood:worship",
+      "description": "Незнакомцы и поклонение",
+      "enabled": true
+    },
+    {
+      "type": "WARN",
+      "if": "tempo:smooth",
+      "then": "mood:passion",
+      "description": "Плавный темп vs страсть",
+      "enabled": true
+    },
+    {
+      "type": "WARN",
+      "if": "tempo:smooth",
+      "then": "mood:hungry",
+      "description": "Медленно vs изголодавшиеся",
+      "enabled": true
+    },
+    {
+      "type": "WARN",
+      "if": "tempo:smooth",
+      "then": "mood:animalistic",
+      "description": "Плавно vs животная похоть",
+      "enabled": true
+    },
+    {
+      "type": "WARN",
+      "if": "novelty:safe",
+      "then": "wild:new_request",
+      "description": "\"Только проверенное\" vs просьба о новом",
+      "enabled": true
+    },
+    {
+      "type": "WARN",
+      "if": "novelty:safe",
+      "then": "scenario:strangers",
+      "description": "\"Проверенное\" + ролеплей = несостыковка",
+      "enabled": true
+    },
+    {
+      "type": "WARN",
+      "if": "afterCare:sleep",
+      "then": "finishPlace:shower_end",
+      "description": "Сразу спать + закончили в душе",
+      "enabled": true
+    },
+    {
+      "type": "WARN",
+      "if": "ritual:dinner",
+      "then": "mood:passion",
+      "description": "Долгий ужин vs страсть прямо сейчас",
+      "enabled": true
+    },
+    {
+      "type": "WARN",
+      "if": "ritual:dinner",
+      "then": "mood:hungry",
+      "description": "Ужин + изголодавшиеся = странно ждать",
+      "enabled": true
+    },
+    {
+      "type": "WARN",
+      "if": "leader:him_all",
+      "then": "mood:dom",
+      "description": "Он ведёт + доминирование — уточните",
+      "enabled": true
+    },
+    {
+      "type": "WARN",
+      "if": "leader:her_all",
+      "then": "mood:dom",
+      "description": "Она ведёт + доминирование — уточните",
+      "enabled": true
+    },
+    {
+      "type": "WARN",
+      "if": "scenario:photo_shoot",
+      "then": "twist:blind_one",
+      "description": "Фотосессия + завязанные глаза",
+      "enabled": true
+    },
+    {
+      "type": "WARN",
+      "if": "scenario:silent_film",
+      "then": "twist:talk",
+      "description": "Немое кино vs говорить",
+      "enabled": true
+    },
+    {
+      "type": "WARN",
+      "if": "forbidden:no_eye",
+      "then": "twist:eye_contact",
+      "description": "Нельзя в глаза vs зрительный контакт",
+      "enabled": true
+    },
+    {
+      "type": "WARN",
+      "if": "sounds:beg",
+      "then": "mood:soft",
+      "description": "Умолять + нежное настроение — спорно",
+      "enabled": true
+    },
+    {
+      "type": "WARN",
+      "if": "toys:wax_candle",
+      "then": "place:bed",
+      "description": "Воск на кровати — испачкается",
+      "enabled": true
+    },
+    {
+      "type": "WARN",
+      "if": "toys:wax_candle",
+      "then": "dress:naked",
+      "description": "Воск напрямую на тело — нужны спец. свечи!",
+      "enabled": true
+    },
+    {
+      "type": "WARN",
+      "if": "novelty:max_new",
+      "then": "duration:short",
+      "description": "Много нового + короткая сессия = не успеете",
+      "enabled": true
+    },
+    {
+      "type": "WARN",
+      "if": "twist:three_orgasms",
+      "then": "duration:short",
+      "description": "3 оргазма за короткое время — спорно",
+      "enabled": true
+    },
+    {
+      "type": "REQUIRE",
+      "if": "twist:mirror",
+      "then": "place:bed,bath,hallway,mirror_room,dressing",
+      "description": "Зеркало нужно место с зеркалом",
+      "enabled": true
+    },
+    {
+      "type": "REQUIRE",
+      "if": "poses:chair_face",
+      "then": "place:chair,sofa",
+      "description": "Стул лицом к лицу — нужен стул/диван",
+      "enabled": true
+    },
+    {
+      "type": "REQUIRE",
+      "if": "poses:standing_lift",
+      "then": "place:hallway,bath,mirror_room,dressing,kitchen,floor",
+      "description": "На руках у стены — нужна стена",
+      "enabled": true
+    },
+    {
+      "type": "REQUIRE",
+      "if": "first:her_multi",
+      "then": "duration:45+",
+      "description": "Множественный оргазм — 45+ мин",
+      "enabled": true
+    },
+    {
+      "type": "REQUIRE",
+      "if": "first:her_three",
+      "then": "duration:60+",
+      "description": "3+ оргазма — 60+ мин",
+      "enabled": true
+    },
+    {
+      "type": "REQUIRE",
+      "if": "toys:cuffs",
+      "then": "mood:dom,passion,play,hungry,rough",
+      "description": "Наручники — при подходящем настроении",
+      "enabled": true
+    },
+    {
+      "type": "REQUIRE",
+      "if": "toys:collar",
+      "then": "mood:dom",
+      "description": "Ошейник — только при доминировании",
+      "enabled": true
+    },
+    {
+      "type": "REQUIRE",
+      "if": "toys:flogger",
+      "then": "mood:dom,rough",
+      "description": "Флоггер — для доминирования или жёстко",
+      "enabled": true
+    },
+    {
+      "type": "REQUIRE",
+      "if": "toys:paddle",
+      "then": "mood:dom,rough,passion",
+      "description": "Падл — при подходящем настроении",
+      "enabled": true
+    },
+    {
+      "type": "REQUIRE",
+      "if": "toys:gag",
+      "then": "mood:dom,rough",
+      "description": "Кляп — для доминирования",
+      "enabled": true
+    },
+    {
+      "type": "REQUIRE",
+      "if": "leader:sighted",
+      "then": "twist:blind_one,blind_both",
+      "description": "\"Ведёт зрячий\" требует завязанных глаз",
+      "enabled": true
+    },
+    {
+      "type": "REQUIRE",
+      "if": "leader:her_strict",
+      "then": "mood:dom",
+      "description": "Она диктует — режим доминирования",
+      "enabled": true
+    },
+    {
+      "type": "REQUIRE",
+      "if": "leader:him_strict",
+      "then": "mood:dom",
+      "description": "Он диктует — режим доминирования",
+      "enabled": true
+    },
+    {
+      "type": "REQUIRE",
+      "if": "scenario:forbidden",
+      "then": "sounds:hold_back,whisper,breath_only",
+      "description": "Запрещённая встреча → тихие звуки",
+      "enabled": true
+    },
+    {
+      "type": "REQUIRE",
+      "if": "scenario:silent_film",
+      "then": "sounds:breath_only,whisper",
+      "description": "Немое кино → без звуков",
+      "enabled": true
+    },
+    {
+      "type": "REQUIRE",
+      "if": "scenario:massage_role",
+      "then": "toys:oil,massage_oil",
+      "description": "Сценарий \"массажист\" → масло",
+      "enabled": true
+    },
+    {
+      "type": "REQUIRE",
+      "if": "scenario:master_slave",
+      "then": "mood:dom",
+      "description": "Госпожа/раб → доминирование",
+      "enabled": true
+    },
+    {
+      "type": "REQUIRE",
+      "if": "scenario:auction",
+      "then": "mood:dom",
+      "description": "Аукцион → доминирование",
+      "enabled": true
+    },
+    {
+      "type": "REQUIRE",
+      "if": "tempo:broken",
+      "then": "duration:30+",
+      "description": "Рваный темп требует 30+ мин",
+      "enabled": true
+    },
+    {
+      "type": "REQUIRE",
+      "if": "tempo:edge_cycles",
+      "then": "duration:45+",
+      "description": "Edging-циклы требуют 45+ мин",
+      "enabled": true
+    },
+    {
+      "type": "REQUIRE",
+      "if": "focus:timer",
+      "then": "duration:30+",
+      "description": "Таймер 15+15 → минимум 30 мин",
+      "enabled": true
+    },
+    {
+      "type": "REQUIRE",
+      "if": "twist:restraint",
+      "then": "toys:cuffs,rope_easy",
+      "description": "Привязан → нужны наручники или верёвки",
+      "enabled": true
+    },
+    {
+      "type": "REQUIRE",
+      "if": "foreplay:wax_play",
+      "then": "toys:wax_candle",
+      "description": "Игра с воском → нужны спец. свечи",
+      "enabled": true
+    },
+    {
+      "type": "REQUIRE",
+      "if": "foreplay:rope_light",
+      "then": "toys:rope_easy",
+      "description": "Лёгкая обвязка → верёвки",
+      "enabled": true
+    },
+    {
+      "type": "REQUIRE",
+      "if": "twist:photo_during",
+      "then": "triggers:custom_1,custom_2,custom_3,none",
+      "description": "Фото — обсудите согласие в триггерах",
+      "enabled": false
+    }
+  ],
+  "presets": [
+    {
+      "id": "tender_easy",
+      "name": "Нежная ночь",
+      "description": "Романтика, медленный темп, проверенное",
+      "levels": [
+        "easy"
+      ],
+      "enableCategories": [
+        "mood",
+        "tempo",
+        "leader",
+        "ritual",
+        "foreplay",
+        "foreplayDur",
+        "place",
+        "ambient",
+        "duration",
+        "afterCare"
+      ],
+      "disableValues": [
+        "mood:dom",
+        "mood:rough",
+        "mood:hungry",
+        "mood:animalistic",
+        "tempo:hard_start"
+      ],
+      "boost": [
+        "mood:soft",
+        "mood:romantic",
+        "mood:massage",
+        "tempo:smooth",
+        "ambient:candles",
+        "foreplay:massage_fp",
+        "ritual:dance_song",
+        "afterCare:hugs_silent"
+      ]
+    },
+    {
+      "id": "passionate_med",
+      "name": "Страстная ночь",
+      "description": "Жадно, быстро, с фишками среднего уровня",
+      "levels": [
+        "easy",
+        "medium"
+      ],
+      "enableCategories": [
+        "mood",
+        "tempo",
+        "leader",
+        "twist",
+        "poses",
+        "place",
+        "toys",
+        "dress",
+        "first",
+        "finish",
+        "sounds"
+      ],
+      "disableValues": [
+        "mood:soft",
+        "mood:massage",
+        "mood:romantic",
+        "tempo:smooth"
+      ],
+      "boost": [
+        "mood:passion",
+        "mood:hungry",
+        "tempo:hard_start",
+        "leader:him_all",
+        "poses:doggy",
+        "poses:standing",
+        "sounds:loud"
+      ]
+    },
+    {
+      "id": "experiment_full",
+      "name": "Полный эксперимент",
+      "description": "Все уровни, максимум разнообразия",
+      "levels": [
+        "easy",
+        "medium",
+        "extra"
+      ],
+      "enableCategories": [],
+      "disableValues": [],
+      "boost": [
+        "wild:swap",
+        "wild:new_request",
+        "twist:blind_one",
+        "novelty:max_new",
+        "scenario:strangers",
+        "tempo:broken"
+      ]
+    },
+    {
+      "id": "dom_extra",
+      "name": "Доминирование",
+      "description": "Властная игра, ограничения, контроль (extra)",
+      "levels": [
+        "medium",
+        "extra"
+      ],
+      "enableCategories": [
+        "mood",
+        "tempo",
+        "leader",
+        "twist",
+        "forbidden",
+        "poses",
+        "toys",
+        "dress",
+        "focus",
+        "first",
+        "duration",
+        "sounds"
+      ],
+      "disableValues": [
+        "mood:soft",
+        "mood:massage",
+        "mood:romantic",
+        "twist:silent"
+      ],
+      "boost": [
+        "mood:dom",
+        "leader:him_strict",
+        "leader:her_strict",
+        "toys:cuffs",
+        "toys:collar",
+        "twist:restraint",
+        "focus:her_only",
+        "sounds:beg"
+      ]
+    },
+    {
+      "id": "quick_med",
+      "name": "Быстро и горячо",
+      "description": "Короткая сессия, минимум прелюдии",
+      "levels": [
+        "easy",
+        "medium"
+      ],
+      "enableCategories": [
+        "mood",
+        "tempo",
+        "ritual",
+        "foreplay",
+        "poses",
+        "place",
+        "dress",
+        "finish",
+        "novelty"
+      ],
+      "disableValues": [
+        "foreplayDur:long",
+        "duration:long",
+        "mood:soft",
+        "mood:massage",
+        "tempo:smooth"
+      ],
+      "boost": [
+        "mood:passion",
+        "mood:hungry",
+        "tempo:hard_start",
+        "poses:standing",
+        "poses:wall_behind",
+        "place:hallway",
+        "place:kitchen",
+        "ritual:just_start"
+      ]
+    },
+    {
+      "id": "sensual_long",
+      "name": "Чувственная длинная",
+      "description": "Долгая ночь с акцентом на ощущения и заботу",
+      "levels": [
+        "easy",
+        "medium"
+      ],
+      "enableCategories": [
+        "mood",
+        "foreplay",
+        "foreplayDur",
+        "tempo",
+        "leader",
+        "ritual",
+        "sounds",
+        "poses",
+        "place",
+        "duration",
+        "ambient",
+        "afterCare"
+      ],
+      "disableValues": [
+        "tempo:hard_start",
+        "mood:dom",
+        "mood:rough",
+        "toys:cuffs",
+        "toys:spank",
+        "toys:flogger",
+        "toys:paddle"
+      ],
+      "boost": [
+        "mood:massage",
+        "mood:worship",
+        "tempo:smooth",
+        "ritual:shower_before",
+        "afterCare:massage_after",
+        "foreplay:massage_fp",
+        "ambient:aroma"
+      ]
+    },
+    {
+      "id": "newbie",
+      "name": "Первая попытка",
+      "description": "Самое лёгкое, чтобы попробовать игру",
+      "levels": [
+        "easy"
+      ],
+      "enableCategories": [
+        "mood",
+        "foreplay",
+        "poses",
+        "place",
+        "dress",
+        "ambient",
+        "wild"
+      ],
+      "disableValues": [],
+      "boost": [
+        "mood:soft",
+        "mood:play",
+        "poses:missionary",
+        "poses:cowgirl",
+        "wild:photo",
+        "wild:shower"
+      ]
+    },
+    {
+      "id": "roleplay",
+      "name": "Ролевая ночь",
+      "description": "Сценарий + дресс-код по нему",
+      "levels": [
+        "medium"
+      ],
+      "enableCategories": [
+        "scenario",
+        "dress",
+        "mood",
+        "tempo",
+        "ritual",
+        "poses",
+        "place",
+        "toys",
+        "sounds"
+      ],
+      "disableValues": [
+        "scenario:none",
+        "dress:naked",
+        "dress:home_wear"
+      ],
+      "boost": [
+        "scenario:strangers",
+        "scenario:massage_role",
+        "scenario:hotel_meet",
+        "dress:roleplay",
+        "dress:mask"
+      ]
+    },
+    {
+      "id": "sub_extreme",
+      "name": "Сабмиссив-ночь",
+      "description": "Один полностью подчиняется другому",
+      "levels": [
+        "extra"
+      ],
+      "enableCategories": [
+        "mood",
+        "leader",
+        "twist",
+        "forbidden",
+        "limitedBody",
+        "toys",
+        "focus",
+        "sounds"
+      ],
+      "disableValues": [
+        "mood:soft",
+        "mood:romantic",
+        "mood:massage",
+        "leader:natural"
+      ],
+      "boost": [
+        "mood:dom",
+        "leader:him_strict",
+        "leader:her_strict",
+        "twist:restraint",
+        "toys:cuffs",
+        "toys:collar",
+        "toys:gag",
+        "focus:her_only",
+        "focus:him_only",
+        "sounds:beg"
+      ]
+    }
+  ]
+}

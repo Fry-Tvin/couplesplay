@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0a0708">
+    <title>Ночной сценарий</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="wrap">
+        <header class="head">
+            <div class="ornament">◆ ◆ ◆</div>
+            <h1 id="title">Ночной <em>сценарий</em></h1>
+            <p class="sub">Случайность в рамках того, что хотите вы</p>
+            <a href="help.html" class="help-link">Как играть →</a>
+        </header>
+
+        <div class="intensity">
+            <div class="intensity-label">Уровень эксперимента</div>
+            <div class="intensity-grid"></div>
+            <div class="detail-label">Уровень детализации</div>
+            <div class="detail-grid"></div>
+        </div>
+
+        <div id="result" class="result empty">Нажмите «Бросить» — и узнаете, какой будет эта ночь</div>
+
+        <div class="section-label">Критерии вечера</div>
+        <div class="criteria-list" id="criteriaList"></div>
+
+        <div class="safe-word">
+            <label>Стоп-слово</label>
+            <input type="text" id="safeWord" placeholder="например, «красный»">
+        </div>
+
+        <div class="section-label" id="histLabel" style="display:none">История</div>
+        <div class="saved-list" id="histList"></div>
+    </div>
+
+    <div class="controls">
+        <button class="btn btn-primary" id="rollAll">Бросить</button>
+        <button class="btn btn-icon" id="rollUnlocked" title="Перебросить незалоченное">⟲</button>
+        <button class="btn btn-icon" id="adminBtn" title="Настройки">⚙</button>
+    </div>
+
+    <div class="modal" id="adminModal">
+        <div class="modal-inner">
+            <div class="modal-head">
+                <h2>Настройка значений</h2>
+                <button class="modal-close" id="closeAdmin">×</button>
+            </div>
+            <div class="modal-body">
+                <p style="font-size:13px;color:var(--ink-dim);margin-bottom:14px;line-height:1.5">
+                    Здесь решаешь, что может выпасть в каждом критерии. На главном экране показаны только названия —
+                    содержимое скрыто.
+                </p>
+                <div class="admin-actions">
+                    <button class="btn" id="enableAll">Включить всё</button>
+                    <button class="btn" id="onlyEasy">Только лёгкое</button>
+                    <button class="btn" id="resetSettings">Сброс</button>
+                </div>
+                <div id="adminContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="poseModal">
+        <div class="modal-inner pose-modal-inner">
+            <div class="modal-head">
+                <h2 id="poseModalTitle"></h2>
+                <button class="modal-close" id="closePoseModal">×</button>
+            </div>
+            <div class="modal-body">
+                <p id="poseModalDescription" class="pose-description"></p>
+                <div id="poseModalTip" class="pose-tip" style="display:none">
+                    <div class="pose-tip-label">Совет</div>
+                    <p id="poseModalTipText"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="public/script.js"></script>
+
+</body>
+
+</html>
