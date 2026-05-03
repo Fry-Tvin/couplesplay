@@ -861,6 +861,7 @@ input[type="range"]::-moz-range-thumb {
 }
 .help-section .dot-easy { background: var(--green); }
 .help-section .dot-medium { background: var(--yellow); }
+.help-section .dot-extra { background: var(--rose); }
 
 .help-section--accent {
   background: linear-gradient(135deg, #1a1014 0%, #14101280 100%);
